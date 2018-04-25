@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QUIZ</title>
+	<link rel="stylesheet" type="text/css" href="C:\Users\urusha\Desktop\html\QUIZ.css">
+	<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+</head>
+<body>
+	<div class="grid">
+		<div id="QUIZ"><h1> Health Quiz </h1>
+		<hr style="margin-top: 20px">
+		<p id="question">What are the symptoms of suffering from kidney disease? </p>
+				<div id="butt" class="button">
+					<button id="btn1" onclick="next()" > Swelling of Face</button>
+					<button id="btn2" onclick="next()">High Blood Pressure</button><br>
+					<button id="btn3" onclick="next()" >Respiration Problem</button>
+					<button id="btn4" onclick="next()" > All of the above </button><br>
+					<hr style="margin-bottom: 20px">
+					<p id="counter"> Question 1 of 5 </p> 
+				</div>
+
+		</div>
+	</div>
+			
+			<script type="text/javascript">
+ 				var a=0;
+ 							var counter=2;			
+
+					function next(){
+					
+						document.getElementById("counter").innerHTML="Question "+counter+" of 5 ";
+						if (counter>4){
+							counter=5;
+
+					}
+					else{
+						counter++;
+					}
+					
+				a++;
+				if (a==1) {
+					document.getElementById('question').innerHTML = "If a person is put on a dialysis, he is suffering from ";
+					option("heart disease","kidney disease","Respiratory problem"," None of the above");
+				}
+
+				else if (a==2) {
+					document.getElementById('question').innerHTML = "Removal of waste from our body is due to the process of:";
+					option("Excretion"," Respiration","Exhalation","Double Circulation");
+			}
+				else if (a==3){
+					document.getElementById('question').innerHTML = "What is the shape of the kidney?"; 
+					option("It is an oval shaped organ.","It is bean shaped organ","It is rectangular in shape.","It has no fixed shape.");
+				}
+				else if (a==4){
+					document.getElementById('question').innerHTML = "What is the function of Kidney?"; 
+				option("It cleans blood by filtering it <br>and removes waste products.","It regulates minerals in the <br> body and produce hormones.","Both A and B are correct","Only A is correct");
+				}
+
+			}
+			function option(b,c,d,e)
+			 {
+				
+				document.getElementById('btn1').innerHTML = b;
+				document.getElementById('btn2').innerHTML = c;
+				document.getElementById('btn3').innerHTML = d;
+				document.getElementById('btn4').innerHTML = e;
+			}
+								
+			</script>
+
+
+</div>
+</body>
+</html>
